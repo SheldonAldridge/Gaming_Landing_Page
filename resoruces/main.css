@@ -1,0 +1,22 @@
+:root{
+    --dark-blue:#131735;
+    --dark-purple:#7D397A;
+    --light-purple:#9755BE;
+    --green:#26FF02;
+    --grey:#2C2B2C;
+    --white:#FFFFFF;
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--dark-blue);
+}
+
+#nav-background-colour{
+    background-color: var(--dark-purple)!important;
+}
+
+#nav-text a{
+    color: var(--white) !important;
+}
