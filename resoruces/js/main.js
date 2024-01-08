@@ -86,4 +86,16 @@ const gameProductsFeatured6 = new GameProductFeatured("NARUTO SHIPPUDEN ULIMATE 
 const gameProductsFeatured7 = new GameProductFeatured("DAYS GONE", ``, ``, `R${179.75}`, "../Gaming/naruto ninja storm 4.jpg");
 
 gameProductsFeaturedArray.push(gameProductsFeatured1,gameProductsFeatured2,gameProductsFeatured3,gameProductsFeatured4,gameProductsFeatured5,gameProductsFeatured6,gameProductsFeatured7)
-console.log(gameProductsFeaturedArray)
+console.log(gameProductsFeaturedArray);
+
+
+let grid = document.getElementsByClassName('grid text-center')
+
+function renderDealsItem(){
+  let divEl = document.createElement = "div";
+  divEl.classList.add("g-col-4");
+  
+  console.log(divEl);
+}
+
+renderDealsItem()
