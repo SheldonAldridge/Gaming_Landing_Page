@@ -46,82 +46,92 @@ let gameProductsDealsArray = [];
 class GameProductDeals {
   constructor(title, price, discount, discountPrice,image) {
       this.title = title;
-      this.price = price;
-      this.discount = discount;
       this.discountPrice = discountPrice;
+      this.discount = discount;
+      this.price = price;
       this.image = image;
   }
 }
 
 const gameProductDeals1 = new GameProductDeals("RED DEAD REDEMPTION 2", `R${96.10}`, `${-75}%`, `R${384.39}`, "../resoruces/Gaming/Red Dead  Redemption 2.jpg");
 const gameProductDeals2 = new GameProductDeals("SPIDER-MAN REMASTERED", `R${539.40}`, `${-40}%`, `R${899.00}`, "../resoruces/Gaming/Spiderman.jpg");
-const gameProductDeals3 = new GameProductDeals("REMNANT II", `R${389.40}`, `${-40}%`, `R${649.00}`, "./resoruces/Gaming/Remnant 2.jpg");
-const gameProductDeals4 = new GameProductDeals("CYBERPUNK 2077", `R${273.95}`, `${-60}%`, `R${456.59}`, "./resoruces/Gaming/Cyberpunk.jpg");
-const gameProductDeals5 = new GameProductDeals("HOGWARTS LEGACY", `R${399.92}`, `${-20}%`, `R${499.90}`, "./resoruces/Gaming/Hogwarts.jpg");
-const gameProductDeals6 = new GameProductDeals("7 DAYS TO DIE", `R${52.56}`, `${-76}%`, `R${219.56}`, "./resoruces/Gaming/Hogwarts.jpg");
+const gameProductDeals3 = new GameProductDeals("REMNANT II", `R${389.40}`, `${-40}%`, `R${649.00}`, "../resoruces/Gaming/Remnant 2.jpg");
+const gameProductDeals4 = new GameProductDeals("CYBERPUNK 2077", `R${273.95}`, `${-60}%`, `R${456.59}`, "../resoruces/Gaming/Cyberpunk.jpg");
+const gameProductDeals5 = new GameProductDeals("HOGWARTS LEGACY", `R${399.92}`, `${-20}%`, `R${499.90}`, "../resoruces/Gaming/Hogwarts.jpg");
+const gameProductDeals6 = new GameProductDeals("7 DAYS TO DIE", `R${52.56}`, `${-76}%`, `R${219.56}`, "../resoruces/Gaming/7 Days to die.jpg");
 
 gameProductsDealsArray.push(gameProductDeals1,gameProductDeals2,gameProductDeals3,gameProductDeals4,gameProductDeals5,gameProductDeals6)
-console.log(gameProductsDealsArray)
+
 
 function renderDealsItem(){
 
   let grid = document.querySelector('#grid');
   let divEl = document.createElement("div");
-  divEl.classList.add("g-col-4");
-  grid.appendChild(divEl)
-
-  gameProductsDealsArray.forEach(element => {
-   for (let i = 0; i < gameProductsDealsArray.length; i++) {
-    divEl.innerHTML = `
-  <div class="row">
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-        <p class="card-text" id="discount">${gameProductDeals1.discount}</p>
-        <img src="${gameProductDeals1.image}" class="card-img-top" alt="Red Dead Redemption 2">
-        
-        <div class="card-body">
-          <h5 class="card-title">${gameProductDeals1.title}</h5>
-          <p class="card-text" id="price"${gameProductDeals1.price}</p>
-          <p class="card-text" id="discountPrice"${gameProductDeals1.discountPrice}</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-        <p class="card-text" id="discount">${gameProductDeals2.discount}</p>
-        <img src="${gameProductDeals2.image}" class="card-img-top" alt="Red Dead Redemption 2">
-        
-        <div class="card-body">
-          <h5 class="card-title">${gameProductDeals2.title}</h5>
-          <p class="card-text" id="price"${gameProductDeals2.price}</p>
-          <p class="card-text" id="discountPrice"${gameProductDeals2.discountPrice}</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-        <p class="card-text" id="discount">${gameProductDeals3.discount}</p>
-        <img src="${gameProductDeals3.image}" class="card-img-top" alt="Red Dead Redemption 2">
-        
-        <div class="card-body">
-          <h5 class="card-title">${gameProductDeals3.title}</h5>
-          <p class="card-text" id="price"${gameProductDeals3.price}</p>
-          <p class="card-text" id="discountPrice"${gameProductDeals3.discountPrice}</p>
-        </div>
-      </div>
-    </div>
-
-    
-
-  </div>
-`
-   }
- });
+  divEl.classList.add("row");
+  grid.appendChild(divEl);
   
-  console.log(divEl);
+  for (let i = 0; i < gameProductsDealsArray.length; i++) {
+    
+      let gameProductDeals = gameProductsDealsArray[i];
+
+      
+
+      let divColEl = document.createElement("div");
+      divColEl.classList.add("col");
+      divEl.appendChild(divColEl);
+
+      let divCard = document.createElement("div");
+      divCard.classList.add("card");
+      divColEl.appendChild(divCard);
+
+      let Disc = document.createElement("h5");
+      Disc.classList.add("card-title");
+      Disc.setAttribute('id','discount')
+      Disc.innerText = gameProductDeals.discount
+      divCard.appendChild(Disc);
+
+      let imagesrc = document.createElement("img");
+      imagesrc.classList.add("card-img-top");
+      imagesrc.setAttribute("src", gameProductDeals.image);
+      divCard.appendChild(imagesrc);
+
+      let cardbod = document.createElement("div");
+      cardbod.classList.add("card-body");
+      divCard.appendChild(cardbod);
+
+      let headFive = document.createElement("h5");
+      headFive.classList.add("card-title");
+      headFive.innerText = gameProductDeals.title
+      cardbod.appendChild(headFive);
+
+      let cardPara = document.createElement("p");
+      cardPara.classList.add("card-text");
+      cardPara.innerText = gameProductDeals.price
+      cardbod.appendChild(cardPara);
+
+      let cardSpan = document.createElement("span");
+      cardSpan.classList.add("card-text");
+      cardSpan.setAttribute('id','discount-price')
+      cardSpan.innerText = gameProductDeals.discountPrice
+      cardPara.appendChild(cardSpan);
+      
+      if((i + 1) % 3 === 0){
+        divEl = document.createElement("div");
+        divEl.classList.add("row");
+        grid.appendChild(divEl);
+      }
+  }
+
+  let rows = document.querySelectorAll('.row');
+
+  rows.forEach(row  => {
+    if(!row.querySelector('.col')){
+      row.remove()
+    }
+  });
+  
 }
+
 
 renderDealsItem()
 
@@ -148,9 +158,3 @@ const gameProductsFeatured6 = new GameProductFeatured("NARUTO SHIPPUDEN ULIMATE 
 const gameProductsFeatured7 = new GameProductFeatured("DAYS GONE", ``, ``, `R${179.75}`, "./resoruces/Gaming/naruto ninja storm 4.jpg");
 
 gameProductsFeaturedArray.push(gameProductsFeatured1,gameProductsFeatured2,gameProductsFeatured3,gameProductsFeatured4,gameProductsFeatured5,gameProductsFeatured6,gameProductsFeatured7)
-console.log(gameProductsFeaturedArray);
-console.log(gameProductsFeatured1);
-
-
-
-
