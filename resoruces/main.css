@@ -8,9 +8,10 @@
 }
 
 body{
-    margin: 0;
+    margin: auto;
     box-sizing: border-box;
     background-color: var(--dark-blue);
+    max-width: 600px;
 }
 
 .navbar-brand,.nav-item{
@@ -90,4 +91,24 @@ body{
     border: 1px solid var(--dark-purple);
     width: 100%;
     margin: auto auto;
+}
+
+.card{
+    width:auto !important;
+    background-color: transparent !important;
+}
+
+#discount{
+    color: var(--green);
+    background-color: var(--grey);
+}
+
+.card-body{
+    background-color: var(--grey) !important;
+    width:auto;
+    height: auto;
+}
+
+.card-text,.card-body{
+    color:var(--white);
 }
