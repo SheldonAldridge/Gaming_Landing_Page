@@ -132,7 +132,6 @@ function renderDealsItem(){
   
 }
 
-
 renderDealsItem()
 
 /* Game Product Featured contructor */
@@ -149,12 +148,79 @@ class GameProductFeatured {
   }
 }
 
-const gameProductsFeatured1 = new GameProductFeatured("DIGIMON WORLD: NEXT ORDER", ``, ``, `R${699.00}`, "./resoruces/Gaming/Digimon World next order.jpg");
-const gameProductsFeatured2 = new GameProductFeatured("DRAGON'S DOGMA: DARK ARISEN", ``, ``, `R${360.00}`, "./resoruces./Gaming/Dragon Dogma.jpg");
-const gameProductsFeatured3 = new GameProductFeatured("CALL OF DUTY MODERN WARFARE III", ``, ``, `R${965.30}`, "./resoruces/Gaming/COD-MW-III-956x528-En.png");
-const gameProductsFeatured4 = new GameProductFeatured("MINECRAFT", ``, ``, `R${360.39}`, "../Gaming/Minecraft.jpg");
-const gameProductsFeatured5 = new GameProductFeatured("DRAGONBALL XENOVERSE 2", ``, ``, `R${279.50}`, "./resoruces/Gaming/Xenoverse 2.jpg");
-const gameProductsFeatured6 = new GameProductFeatured("NARUTO SHIPPUDEN ULIMATE NINJA STORM 4", ``, ``, `R${279.00}`, "./resoruces/Gaming/naruto ninja storm 4.jpg");
-const gameProductsFeatured7 = new GameProductFeatured("DAYS GONE", ``, ``, `R${179.75}`, "./resoruces/Gaming/naruto ninja storm 4.jpg");
+const gameProductsFeatured1 = new GameProductFeatured("DIGIMON WORLD: NEXT ORDER", `R${699.00}`, ``, ``, "../resoruces/Gaming/Digimon World next order.jpg");
+const gameProductsFeatured2 = new GameProductFeatured("DRAGON'S DOGMA: DARK ARISEN", `R${360.00}`, ``, ``, "./resoruces/Gaming/Dragon Dogma.jpg");
+const gameProductsFeatured3 = new GameProductFeatured("WARFRAME", `FREE`, ``, ``, "./resoruces/Gaming/warframe-metacard.png");
+const gameProductsFeatured4 = new GameProductFeatured("MINECRAFT", `R${360.39}`, ``, ``, "./resoruces/Gaming/Minecraft.jpg");
+const gameProductsFeatured5 = new GameProductFeatured("DRAGONBALL XENOVERSE 2", `R${279.50}`, ``, ``, "./resoruces/Gaming/Xenoverse 2.jpg");
+const gameProductsFeatured6 = new GameProductFeatured("NARUTO SHIPPUDEN ULIMATE NINJA STORM 4", `R${279.00}`, ``, ``, "./resoruces/Gaming/naruto ninja storm 4.jpg");
+const gameProductsFeatured7 = new GameProductFeatured("DAYS GONE", `R${179.75}`, ``, ``, "./resoruces/Gaming/Days Gone.jpg");
 
 gameProductsFeaturedArray.push(gameProductsFeatured1,gameProductsFeatured2,gameProductsFeatured3,gameProductsFeatured4,gameProductsFeatured5,gameProductsFeatured6,gameProductsFeatured7)
+
+function renderFeaturedItem(){
+
+  let grid = document.querySelector('#grid-featured');
+  console.log(grid)
+  let divEl = document.createElement("div");
+  divEl.classList.add("row");
+  grid.appendChild(divEl);
+  
+  for (let i = 0; i < gameProductsFeaturedArray.length; i++) {
+    
+      let gameProductFeatured = gameProductsFeaturedArray[i];
+      
+      console.log(gameProductFeatured)
+      let divColEl = document.createElement("div");
+      divColEl.classList.add("col");
+      divEl.appendChild(divColEl);
+
+      let divCard = document.createElement("div");
+      divCard.classList.add("card");
+      divColEl.appendChild(divCard);
+
+      let imagesrc = document.createElement("img");
+      imagesrc.classList.add("card-img-top");
+      imagesrc.setAttribute("src", gameProductFeatured.image);
+      divCard.appendChild(imagesrc);
+
+      let cardbod = document.createElement("div");
+      cardbod.classList.add("card-body");
+      
+      divCard.appendChild(cardbod);
+
+      let headFive = document.createElement("h6");
+      headFive.classList.add("card-title");
+      
+      headFive.innerText = gameProductFeatured.title
+      cardbod.appendChild(headFive);
+
+      let cardPara = document.createElement("p");
+      cardPara.classList.add("card-text");
+      cardPara.setAttribute("id", "featured-paragraph");
+      cardPara.innerText = gameProductFeatured.price
+      cardbod.appendChild(cardPara);
+
+      
+      if((i + 2) % 3 === 0){
+        divEl = document.createElement("div");
+        divEl.classList.add("row");
+        grid.appendChild(divEl);
+      }
+
+      if(gameProductFeatured.title = "NARUTO SHIPPUDEN ULIMATE NINJA STORM 4"){
+        headFive.style.front="5px !important";
+      }
+  }
+
+  let rows = document.querySelectorAll('.row');
+
+  rows.forEach(row  => {
+    if(!row.querySelector('.col')){
+      row.remove()
+    }
+  });
+  
+}
+
+renderFeaturedItem()
