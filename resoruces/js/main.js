@@ -65,7 +65,7 @@ gameProductsDealsArray.push(gameProductDeals1,gameProductDeals2,gameProductDeals
 
 function renderDealsItem(){
 
-  let grid = document.querySelector('#grid');
+  let grid = document.querySelector('#grid-deals');
   let divEl = document.createElement("div");
   divEl.classList.add("row");
   grid.appendChild(divEl);
@@ -73,8 +73,6 @@ function renderDealsItem(){
   for (let i = 0; i < gameProductsDealsArray.length; i++) {
     
       let gameProductDeals = gameProductsDealsArray[i];
-
-      
 
       let divColEl = document.createElement("div");
       divColEl.classList.add("col");

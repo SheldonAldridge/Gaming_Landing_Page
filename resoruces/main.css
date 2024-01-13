@@ -11,12 +11,18 @@ body{
     margin: auto;
     box-sizing: border-box;
     background-color: var(--dark-blue);
-    max-width: 1000px;
-    min-width: 360px;
 }
 
-.navbar-brand,.nav-item{
-    padding-left: 10px;
+#header{
+    margin: 10px;
+}
+
+.logo{
+    position: absolute !important;
+}
+
+#top-nav .navbar-brand {
+    display: none;
 }
 
 #nav-background-colour{
@@ -25,12 +31,12 @@ body{
 
 #nav-text a{
     color: var(--white) !important;
+    text-shadow: 0 0 30px #ffffff;
 }
 
 .container-fluid{
     position: relative;
     padding: 0;
-    margin-bottom: 20px;
 }
 
 .slides{
@@ -51,7 +57,6 @@ body{
   cursor: pointer;
   background-color: rgba(141, 45, 125, 0.5);
   height: 100%;
-  
 }
 
 .next{
@@ -60,16 +65,29 @@ body{
     border-radius: 3px 0 0 3px;
 }
 
+.row{
+    display: flex;
+}
+
+.col{
+    width:50vw;
+}
+
 #left-arrow,#right-arrow{
     max-width:100%;
-    width:30%;
-    filter: invert(87%) sepia(100%) saturate(19%) hue-rotate(311deg) brightness(108%) contrast(109%);
+    width:auto;
+    filter: invert(8%) sepia(9%) saturate(7488%) hue-rotate(206deg) brightness(99%) contrast(98%);
+    margin-top: 5rem;
 }
 
-.prev:hover, next:hover{
-    background-color: rgb(0, 0, 0, 0.8);
+.prev:hover, .next:hover{
+    background-color: var(--white).5;
+    
 }
 
+#grid-deals{
+    gap: 10vw;
+}
 
 #deals-container,#featured-container{
     display: flex;
@@ -88,10 +106,8 @@ body{
     border: 1px solid var(--dark-purple);
     border-radius: 10px;
     max-width: 100%;
-    
     text-align: center;
     border-color: rgba(255, 0, 212, 1);
-    letter-spacing: 10px;
     margin: auto;
 }
 
@@ -99,6 +115,10 @@ body{
     border: 1px solid rgba(255, 0, 212, 1);
     width: 100%;
     margin: auto auto;
+}
+
+.footer-v-line{
+    border: 1px solid var(--dark-blue);
 }
 
 #discount{
@@ -109,10 +129,13 @@ body{
     width: 25%;
 }
 
+.card-img-top{
+    cursor:pointer;
+}
+
 .card{
-    margin:auto;
     background-color: transparent;
-    width: 60%;
+    width: 100%;
     padding-bottom: 10px;
 }
 
@@ -144,13 +167,158 @@ body{
     color: var(--white);
 }
 
-@media only screen and (min-width: 1366px){
+#footer{
+    margin: 0;
+    padding: 0;
+}
+
+.foot{
+    background-color: var(--dark-purple);
+    color: var(--white);
+    max-width: 100%;
+    text-align: center;
+}
+
+.list-nav{
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.list-nav li{
+    list-style-type: none;
+    font-size: 14px;
+}
+
+#Sponsored-by{
+    margin: auto;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.grid-support{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.display-5{
+    font-size: 20px;
+}
+
+.list-nav-item img{
+    width:30%;
+    padding-bottom: 10px;
+}
+
+.list-nav-item svg{
+    width:40%;
+    padding-bottom: 10px;
+}
+
+@media only screen and (min-width: 800px){
+
+    #top-nav .navbar-brand {
+        display: block !important;
+        background-color: var(--dark-purple);
+    }
+
+    .logo {
+        position: relative !important;
+    }
+
+    #top-logo{
+        display:none;
+    }
+
+    #top-nav a{
+        font-size: 60px;
+        padding: 10px;
+    }
+
+    #nav-background-colour{
+        background-color: var(--dark-blue) !important;
+    }
+
+    .navbar-nav{
+        max-width: 1000px;
+        padding-left: 10px;
+        margin: auto;
+        
+    }
+
+    .navbar-nav li{
+        padding-left: 30px;
+        font-size: 25px;
+    }
+
+    #nav-background-colour,.slides,#slideshow{
+        max-width:1300px;
+        margin: auto;
+    }
+
+    .slides img{
+        object-fit: cover;
+        height: 650px;
+        width:1300px;
+        overflow: hidden;
+    }
+
     .card{
         width: 100%;
+    }
+
+    .card-title,.card-text{
+        font-size:20px;
+    }
+
+    .display-6{
+        width: 30%;
     }
 
     .card-body{
         display: grid;
         grid-template-columns: repeat(2,1fr);
+    }
+
+    #left-arrow,#right-arrow{
+        max-width:100%;
+        width:auto;
+        filter: invert(8%) sepia(9%) saturate(7488%) hue-rotate(206deg) brightness(99%) contrast(98%);
+        margin-top: 15rem;
+    }
+
+    .list-nav{
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .grid-support{
+        display: flex;
+    }
+
+    .list-nav-item img{
+        width:20%;
+    }
+
+    .foot{
+        display:flex;
+    }
+
+    .display-5{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    .list-nav-item img{
+        width:20%;
+    }
+
+    .list-nav-item svg{
+        width:50%;
+    }
+
+    .footer-v-line{
+        display: none;
     }
 }

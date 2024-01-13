@@ -23,12 +23,17 @@
   </head>
   <body>
 
+    <div class="container-fluid logo" id="top-nav">
+      <a class="navbar-brand" id = "top-logo" href="#">Logo</a>
+    </div>
+
     <nav
       class="navbar navbar-expand-lg bg-body-tertiary"
       id="nav-background-colour"
     >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+    
+      <div class="container-fluid" id="header">
+        <a class="navbar-brand" id = "top-logo" href="#">Logo</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -43,29 +48,20 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item" id="nav-text">
-              <a class="nav-link active" aria-current="page" href="#">PC</a>
+              <a class="nav-link" href="#deals-container" >DEALS</a>
+            </li>
+            <li class="nav-item" id="nav-text" >
+              <a class="nav-link" href="#featured-container">FEATURED</a>
             </li>
             <li class="nav-item" id="nav-text">
-              <a class="nav-link" href="#">PSN</a>
-            </li>
-            <li class="nav-item" id="nav-text">
-              <a class="nav-link" href="#">XBOX</a>
-            </li>
-            <li class="nav-item" id="nav-text">
-              <a class="nav-link">DEALS</a>
-            </li>
-            <li class="nav-item" id="nav-text">
-              <a class="nav-link">FEATURED</a>
-            </li>
-            <li class="nav-item" id="nav-text">
-              <a class="nav-link">COMING SOON</a>
+              <a class="nav-link" href="#coming-soon-container">COMING SOON</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="slideshow">
         <div class="slides fading">
           <img
             class="img-fluid"
@@ -121,14 +117,14 @@
           />
         </a>
       </div>
-    </div>
+    
 
     <div class="container" id = "deals-container">
       <h1 class="display-6">Deals</h1>
       <p class="v-line"></p>
     </div>
 
-    <div class="container" id = "grid"></div>
+    <div class="container" id = "grid-deals"></div>
       
     <div class="container" id = "featured-container">
       <h1 class="display-6">Featured</h1>
@@ -138,6 +134,43 @@
     <div class="container" id = "grid-featured">
       
     </div>
+
+    <footer>
+
+      <div class="container-fluid" id="footer">
+        <div class="foot">
+          
+          <ul class="list-nav">
+            <li class="list-nav-item">DEALS</li>
+            <li class="list-nav-item">FEATURED</li>
+            <li class="list-nav-item">COMING SOON</li>
+          </ul>
+
+          <p class="footer-v-line"></p>
+
+          <ul class="list-nav" id="Sponsored-by">
+          <div class="display-5">Sponsored by</div>
+            <div class="grid-support">
+            <li class="list-nav-item"><img src="./resoruces/Gaming/Steam_icon_logo.svg.png" alt="Steam Icon"></li>
+            <li class="list-nav-item"><img src="./resoruces/Gaming/cd keys.png" alt="cd keys logo">
+            <li class="list-nav-item"><img src="/resoruces/Gaming/ep4410f956-epic-games-logo-from-a-real-world-environment-to-a-40-billion-plus-logo-de-epic.png" alt="Epci Games Icon"></li>
+            <li class="list-nav-item"><img src="/resoruces/Gaming/EA App.png" alt="EA App"></li>
+          </div>
+          </ul>
+
+          <p class="footer-v-line"></p>
+
+          <ul class="list-nav">
+            <li class="list-nav-item">Email: sheldonaldridge@yahoo.com</li>
+            <li class="list-nav-item">Contact: 079 716 9463</li>
+          </ul>
+
+
+          
+        </div>
+      </div>
+      
+    </footer>
 
   </body>
 </html>
