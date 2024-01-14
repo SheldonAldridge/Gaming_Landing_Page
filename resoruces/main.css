@@ -82,14 +82,13 @@ body{
 
 .prev:hover, .next:hover{
     background-color: var(--white).5;
-    
 }
 
 #grid-deals{
     gap: 10vw;
 }
 
-#deals-container,#featured-container{
+#deals-container,#featured-container,#coming-soon-container{
     display: flex;
     margin: 30px auto;
 }
@@ -109,6 +108,7 @@ body{
     text-align: center;
     border-color: rgba(255, 0, 212, 1);
     margin: auto;
+    width: 100%;
 }
 
 .v-line{
@@ -120,6 +120,33 @@ body{
 .footer-v-line{
     border: 1px solid var(--dark-blue);
 }
+
+#side-info{
+    display: flex;
+}
+
+.grid-2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-left: 10px;
+    grid-gap:10px;
+}
+
+.grid-2 img{
+    width: 100%;
+}
+
+.left-image{
+    width: 50%;
+}
+
+#length{
+    width:20vw;
+}
+
+
+
+
 
 #discount{
     position: absolute;
@@ -159,6 +186,7 @@ body{
     background-color: var(--grey);
     display: block;
     color: var(--green);
+    font-size: 10px;
 }
 
 #discount-price{
@@ -315,10 +343,6 @@ body{
         font-size: 25px;
     }
 
-    .list-nav-item{
-
-    }
-
     .list-nav-item img{
         width:20%;
     }
@@ -328,6 +352,6 @@ body{
     }
 
     .footer-v-line{
-        display: none;
+        margin-top: 10px;
     }
 }

@@ -218,7 +218,6 @@ function renderFeaturedItem(){
       row.remove()
     }
   });
-  
 }
 
 renderFeaturedItem()
