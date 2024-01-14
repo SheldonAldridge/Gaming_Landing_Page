@@ -195,6 +195,11 @@ body{
     text-decoration: underline;
 }
 
+.list-nav-item a{
+    color: var(--white);
+    text-decoration: none;
+}
+
 .grid-support{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -308,6 +313,10 @@ body{
     .display-5{
         margin-top: 30px;
         font-size: 25px;
+    }
+
+    .list-nav-item{
+
     }
 
     .list-nav-item img{
