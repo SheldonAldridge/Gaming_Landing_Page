@@ -144,10 +144,6 @@ body{
     width:20vw;
 }
 
-
-
-
-
 #discount{
     position: absolute;
     color: var(--green);
@@ -217,22 +213,9 @@ body{
     font-size: 14px;
 }
 
-#Sponsored-by{
-    margin: auto;
-    text-align: center;
-    text-decoration: underline;
-}
-
 .list-nav-item a{
     color: var(--white);
     text-decoration: none;
-}
-
-.grid-support{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 .display-5{
@@ -334,13 +317,18 @@ body{
         width:20%;
     }
 
-    .foot{
-        display:flex;
-    }
-
     .display-5{
         margin-top: 30px;
         font-size: 25px;
+    }
+
+    #footer-nav,#footer-text{
+        display:flex;
+    }
+
+    #foot-title,#foot-SUB {
+       padding-right:200px;
+       padding-left: 10px;
     }
 
     .list-nav-item img{
@@ -352,6 +340,6 @@ body{
     }
 
     .footer-v-line{
-        margin-top: 10px;
+       display: none;
     }
 }
