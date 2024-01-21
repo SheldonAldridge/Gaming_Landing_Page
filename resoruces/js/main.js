@@ -54,12 +54,12 @@ class GameProductDeals {
   }
 }
 
-const gameProductDeals1 = new GameProductDeals("RED DEAD REDEMPTION 2", `R${96.10}`, `${-75}%`, `R${384.39}`, "../resoruces/Gaming/Red Dead  Redemption 2.jpg","https://www.youtube.com/watch?v=F63h3v9QV7w&ab_channel=RockstarGames");
-const gameProductDeals2 = new GameProductDeals("SPIDER-MAN REMASTERED", `R${539.40}`, `${-40}%`, `R${899.00}`, "../resoruces/Gaming/Spiderman.jpg","https://www.youtube.com/watch?v=CMRBuagwRb4&ab_channel=PlayStation");
-const gameProductDeals3 = new GameProductDeals("REMNANT II", `R${389.40}`, `${-40}%`, `R${649.00}`, "../resoruces/Gaming/Remnant 2.jpg","https://www.youtube.com/watch?v=t5-BQi-oi5g&ab_channel=jackfrags");
-const gameProductDeals4 = new GameProductDeals("CYBERPUNK 2077", `R${273.95}`, `${-60}%`, `R${456.59}`, "../resoruces/Gaming/Cyberpunk.jpg");
+const gameProductDeals1 = new GameProductDeals("RED DEAD REDEMPTION 2", `R${96.10}`, `${-75}%`, `R${384.39}`, "./resoruces/Gaming/Red Dead  Redemption 2.jpg","https://www.youtube.com/watch?v=F63h3v9QV7w&ab_channel=RockstarGames");
+const gameProductDeals2 = new GameProductDeals("SPIDER-MAN REMASTERED", `R${539.40}`, `${-40}%`, `R${899.00}`, "./resoruces/Gaming/Spiderman.jpg","https://www.youtube.com/watch?v=CMRBuagwRb4&ab_channel=PlayStation");
+const gameProductDeals3 = new GameProductDeals("REMNANT II", `R${389.40}`, `${-40}%`, `R${649.00}`, "./resoruces/Gaming/Remnant 2.jpg","https://www.youtube.com/watch?v=t5-BQi-oi5g&ab_channel=jackfrags");
+const gameProductDeals4 = new GameProductDeals("CYBERPUNK 2077", `R${273.95}`, `${-60}%`, `R${456.59}`, "./resoruces/Gaming/Cyberpunk.jpg");
 const gameProductDeals5 = new GameProductDeals("HOGWARTS LEGACY", `R${399.92}`, `${-20}%`, `R${499.90}`, "../resoruces/Gaming/Hogwarts.jpg");
-const gameProductDeals6 = new GameProductDeals("7 DAYS TO DIE", `R${52.56}`, `${-76}%`, `R${219.56}`, "../resoruces/Gaming/7 Days to die.jpg");
+const gameProductDeals6 = new GameProductDeals("7 DAYS TO DIE", `R${52.56}`, `${-76}%`, `R${219.56}`, "./resoruces/Gaming/7 Days to die.jpg");
 
 gameProductsDealsArray.push(gameProductDeals1,gameProductDeals2,gameProductDeals3,gameProductDeals4,gameProductDeals5,gameProductDeals6)
 
@@ -147,7 +147,7 @@ class GameProductFeatured {
   }
 }
 
-const gameProductsFeatured1 = new GameProductFeatured("DIGIMON WORLD: NEXT ORDER", `R${699.00}`, ``, ``, "../resoruces/Gaming/Digimon World next order.jpg");
+const gameProductsFeatured1 = new GameProductFeatured("DIGIMON WORLD: NEXT ORDER", `R${699.00}`, ``, ``, "./resoruces/Gaming/Digimon World next order.jpg");
 const gameProductsFeatured2 = new GameProductFeatured("DRAGON'S DOGMA: DARK ARISEN", `R${360.00}`, ``, ``, "./resoruces/Gaming/Dragon Dogma.jpg");
 const gameProductsFeatured3 = new GameProductFeatured("WARFRAME", `FREE`, ``, ``, "./resoruces/Gaming/warframe-metacard.png");
 const gameProductsFeatured4 = new GameProductFeatured("MINECRAFT", `R${360.39}`, ``, ``, "./resoruces/Gaming/Minecraft.jpg");
@@ -235,10 +235,10 @@ class GameComingSoon{
   }
 }
 
-const GameComingSoon1 = new GameComingSoon("BLOOD LINES 2", `COMING SOON`, ``, ``, "../resoruces/Gaming/Coming Soon/Blood Lines 2.jpg");
-const GameComingSoon2 = new GameComingSoon("DRAGON'S DOGMA 2", `COMING SOON`, ``, ``, "../resoruces/Gaming/Coming Soon/Dragon's Dogma 2.png");
-const GameComingSoon3 = new GameComingSoon("MANOR LORDS", `COMING SOON`, ``, ``, "../resoruces/Gaming/Coming Soon/Manor Lords.jpg");
-const GameComingSoon4 = new GameComingSoon("TEKKEN 8", `COMING SOON`, ``, ``, "../resoruces/Gaming/Coming Soon/Tekken 8.jpg");
+const GameComingSoon1 = new GameComingSoon("BLOOD LINES 2", `COMING SOON`, ``, ``, "./resoruces/Gaming/Coming Soon/Blood Lines 2.jpg");
+const GameComingSoon2 = new GameComingSoon("DRAGON'S DOGMA 2", `COMING SOON`, ``, ``, "./resoruces/Gaming/Coming Soon/Dragon's Dogma 2.png");
+const GameComingSoon3 = new GameComingSoon("MANOR LORDS", `COMING SOON`, ``, ``, "./resoruces/Gaming/Coming Soon/Manor Lords.jpg");
+const GameComingSoon4 = new GameComingSoon("TEKKEN 8", `COMING SOON`, ``, ``, "./resoruces/Gaming/Coming Soon/Tekken 8.jpg");
 
 GameComingSoonArray.push(GameComingSoon1,GameComingSoon2,GameComingSoon3,GameComingSoon4);
 
