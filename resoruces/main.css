@@ -188,6 +188,7 @@ body{
     display: block;
     color: var(--green);
     font-size: 10px;
+    cursor: default;
 }
 
 #discount-price{
@@ -287,6 +288,7 @@ body{
 
     .card-title,.card-text{
         font-size:20px;
+        cursor: default;
     }
 
     .display-6{
