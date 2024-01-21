@@ -200,10 +200,12 @@ body{
     background-color: var(--dark-purple);
     color: var(--white);
     max-width: 100%;
+    
 }
 
 .list-unstyled{
     cursor: default;
+    text-align: center !important;
 }
 
 #link a{
