@@ -13,6 +13,10 @@ body{
     background-color: var(--dark-blue);
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+
+
 #header{
     margin: 10px;
 }
@@ -111,6 +115,11 @@ body{
     width: 100%;
 }
 
+#top-logo{
+    font-family: 'Grape Nuts', cursive;
+    color: var(--white);
+}
+
 .v-line{
     border: 1px solid rgba(255, 0, 212, 1);
     width: 100%;
@@ -152,10 +161,6 @@ body{
     width: 25%;
 }
 
-.card-img-top{
-    cursor:pointer;
-}
-
 .card{
     background-color: transparent;
     width: 100%;
@@ -191,14 +196,30 @@ body{
     color: var(--white);
 }
 
-.foot{
+.footer-flex{
     background-color: var(--dark-purple);
     color: var(--white);
     max-width: 100%;
-    text-align: center;
 }
 
+.list-unstyled{
+    cursor: default;
+}
 
+#link a{
+    cursor: pointer;
+    color: var(--white) !important;
+    text-decoration: none;
+}
+
+#link a:hover{
+    cursor: pointer;
+    color: var(--dark-blue) !important;
+}
+
+#darkgrey{
+    background-color: var(--grey) !important;
+}
 
 .display-5{
     font-size: 15px;
@@ -255,6 +276,8 @@ body{
         overflow: hidden;
     }
 
+  
+
     .card{
         width: 100%;
     }
@@ -292,8 +315,9 @@ body{
         width:20%;
     }
 
-    .footer-head,.footer-flex{
+    .footer-flex{
         display: flex;
+        justify-content: space-around;
     }
 
     .footer-head{
@@ -304,12 +328,6 @@ body{
     width: 100%; 
   }
 
-  .footer-flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; 
-    padding: 0;
-  }
 
     .display-5{
         font-size: 20px;

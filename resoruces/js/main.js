@@ -222,3 +222,83 @@ function renderFeaturedItem(){
 }
 
 renderFeaturedItem()
+
+let GameComingSoonArray = [];
+
+class GameComingSoon{
+  constructor(title, price, discount, discountPrice,image) {
+      this.title = title;
+      this.price = price;
+      this.discount = discount;
+      this.discountPrice = discountPrice;
+      this.image = image;
+  }
+}
+
+const GameComingSoon1 = new GameComingSoon("BLOOD LINES 2", `COMING SOON`, ``, ``, "../resoruces/Gaming/Coming Soon/Blood Lines 2.jpg");
+const GameComingSoon2 = new GameComingSoon("DRAGON'S DOGMA 2", `COMING SOON`, ``, ``, "../resoruces/Gaming/Coming Soon/Dragon's Dogma 2.png");
+const GameComingSoon3 = new GameComingSoon("MANOR LORDS", `COMING SOON`, ``, ``, "../resoruces/Gaming/Coming Soon/Manor Lords.jpg");
+const GameComingSoon4 = new GameComingSoon("TEKKEN 8", `COMING SOON`, ``, ``, "../resoruces/Gaming/Coming Soon/Tekken 8.jpg");
+
+GameComingSoonArray.push(GameComingSoon1,GameComingSoon2,GameComingSoon3,GameComingSoon4);
+
+function renderComingSoonItem(){
+
+  let grid = document.querySelector('#grid-coming-soon');
+  console.log(grid)
+  let divEl = document.createElement("div");
+  divEl.classList.add("row");
+  grid.appendChild(divEl);
+  
+  for (let i = 0; i < GameComingSoonArray.length; i++) {
+    
+      let gameComingSoon = GameComingSoonArray[i];
+      
+      let divColEl = document.createElement("div");
+      divColEl.classList.add("col");
+      divEl.appendChild(divColEl);
+
+      let divCard = document.createElement("div");
+      divCard.classList.add("card");
+      divColEl.appendChild(divCard);
+
+      let imagesrc = document.createElement("img");
+      imagesrc.classList.add("card-img-top");
+      imagesrc.setAttribute("src", gameComingSoon.image);
+      divCard.appendChild(imagesrc);
+
+      let cardbod = document.createElement("div");
+      cardbod.classList.add("card-body");
+      
+      divCard.appendChild(cardbod);
+
+      let headFive = document.createElement("h6");
+      headFive.classList.add("card-title");
+      
+      headFive.innerText = gameComingSoon.title
+      cardbod.appendChild(headFive);
+
+      let cardPara = document.createElement("p");
+      cardPara.classList.add("card-text");
+      cardPara.setAttribute("id", "featured-paragraph");
+      cardPara.innerText = gameComingSoon.price
+      cardbod.appendChild(cardPara);
+
+      
+      if((i + 2) % 3 === 0){
+        divEl = document.createElement("div");
+        divEl.classList.add("row");
+        grid.appendChild(divEl);
+      }
+  }
+
+  let rows = document.querySelectorAll('.row');
+
+  rows.forEach(row  => {
+    if(!row.querySelector('.col')){
+      row.remove()
+    }
+  });
+}
+
+renderComingSoonItem()
