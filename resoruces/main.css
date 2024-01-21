@@ -206,6 +206,7 @@ body{
 .list-unstyled{
     cursor: default;
     text-align: center !important;
+    margin: 0;
 }
 
 #link a{
