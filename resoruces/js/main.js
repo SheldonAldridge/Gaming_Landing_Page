@@ -1,3 +1,8 @@
+//Steam API call
+async function comingSoon(){
+  const url = 'https://api.steampowered.com'
+}
+
 
 
 // Slide Show
@@ -5,7 +10,7 @@ let slideIndex = 0;
 showSlides();
 
 function showSlides() {
-  const slides = document.getElementsByClassName("slides");
+  const slides = document.querySelectorAll(".slides");
 
   // Hide all slides
   for (let i = 0; i < slides.length; i++) {
@@ -19,7 +24,7 @@ function showSlides() {
 function plusSlides(n) {
   slideIndex += n;
 
-  const slides = document.getElementsByClassName("slides");
+  const slides = document.querySelectorAll(".slides");
 
   // Reset to the first slide if at the end
   if (slideIndex >= slides.length) {
