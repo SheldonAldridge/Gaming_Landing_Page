@@ -11,7 +11,3 @@ The footer contains a list of information that is not clickable except for the "
 - CD keys
 - GOG Games
 
-# Features To Come Later
-- Gameplay preview when hovering over the games
-- more options in the nav
-- Search function
